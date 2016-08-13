@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
-<meta name="author" content="钟达章" />
+<meta name="author" content="章鱼不是鱼" />
 
 
 
@@ -71,12 +71,14 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -98,13 +100,20 @@
             <img src="/img/avatar.png" class="animated zoomIn">
         </a>
         <hgroup>
-          <h1 class="header-author"><a href="/">钟达章</a></h1>
+          <h1 class="header-author"><a href="/">章鱼不是鱼</a></h1>
         </hgroup>
 
         
-        <p class="header-subtitle">真的不是鱼</p>
+        <p class="header-subtitle">梦醒中来的章鱼，前往前端途中</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -153,6 +162,10 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/notes/">学习笔记</a></li>
+                        
+                            <li><a href="/share/">随笔分享</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -164,7 +177,7 @@
                             
                                 <a class="fa Email" href="mailto:zhangyuge90@gmail.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="/zhangyubushiyu" title="GitHub"></a>
+                                <a class="fa GitHub" href="/" title="GitHub"></a>
                             
                                 <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
@@ -206,7 +219,7 @@
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">钟达章</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">章鱼不是鱼</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
@@ -214,10 +227,10 @@
                 <img src="/img/avatar.png" class="animated zoomIn">
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">钟达章</a></h1>
+              <h1 class="header-author"><a href="/" title="回到主页">章鱼不是鱼</a></h1>
             </hgroup>
             
-            <p class="header-subtitle">真的不是鱼</p>
+            <p class="header-subtitle">梦醒中来的章鱼，前往前端途中</p>
             
             <nav class="header-menu">
                 <ul>
@@ -225,6 +238,10 @@
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/notes/">学习笔记</a></li>
+                
+                    <li><a href="/share/">随笔分享</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -238,7 +255,7 @@
                             
                                 <a class="fa Email" target="_blank" href="mailto:zhangyuge90@gmail.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="/zhangyubushiyu" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="/" title="GitHub"></a>
                             
                                 <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
@@ -302,7 +319,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016 钟达章
+                2016 章鱼不是鱼
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
@@ -331,6 +348,8 @@
 </footer>
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
@@ -362,7 +381,7 @@
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
             
             

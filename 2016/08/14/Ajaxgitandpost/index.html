@@ -15,18 +15,40 @@
 
 
 
-<meta name="description" content="从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。">
+<meta name="description" content="Ajax请求GET方法封装
+首先理一下思路
+
+方法要实现三个参数
+
+
+- 请求资源 **url** 
+- 请求的查询参数 **optons**
+- 请求的回调函数 **callback** 需要接收XHLHttpRequest对象的responseTex属性作为参数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用HTML标签分类图+快速手册">
-<meta property="og:url" content="http://www.zyblog.info/2016/08/14/HtmlTag/index.html">
+<meta property="og:title" content="AJAX GET和POST请求方法封装">
+<meta property="og:url" content="http://www.zyblog.info/2016/08/14/Ajaxgitandpost/index.html">
 <meta property="og:site_name" content="章鱼不是鱼">
-<meta property="og:description" content="从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。">
-<meta property="og:image" content="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&thumbnail=520x520&quality=100">
-<meta property="og:updated_time" content="2016-08-13T16:59:55.000Z">
+<meta property="og:description" content="Ajax请求GET方法封装
+首先理一下思路
+
+方法要实现三个参数
+
+
+- 请求资源 **url** 
+- 请求的查询参数 **optons**
+- 请求的回调函数 **callback** 需要接收XHLHttpRequest对象的responseTex属性作为参数">
+<meta property="og:updated_time" content="2016-08-14T11:06:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用HTML标签分类图+快速手册">
-<meta name="twitter:description" content="从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。">
-<meta name="twitter:image" content="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&thumbnail=520x520&quality=100">
+<meta name="twitter:title" content="AJAX GET和POST请求方法封装">
+<meta name="twitter:description" content="Ajax请求GET方法封装
+首先理一下思路
+
+方法要实现三个参数
+
+
+- 请求资源 **url** 
+- 请求的查询参数 **optons**
+- 请求的回调函数 **callback** 需要接收XHLHttpRequest对象的responseTex属性作为参数">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +80,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>常用HTML标签分类图+快速手册 | 章鱼不是鱼</title>
+<title>AJAX GET和POST请求方法封装 | 章鱼不是鱼</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -262,11 +284,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-HtmlTag" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Ajaxgitandpost" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/14/HtmlTag/" class="article-date">
-      <time datetime="2016-08-13T16:35:42.000Z" itemprop="datePublished">2016-08-14</time>
+      <a href="/2016/08/14/Ajaxgitandpost/" class="article-date">
+      <time datetime="2016-08-14T10:15:58.000Z" itemprop="datePublished">2016-08-14</time>
 </a>
 
 
@@ -281,7 +303,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常用HTML标签分类图+快速手册
+      AJAX GET和POST请求方法封装
     </h1>
   
 
@@ -290,13 +312,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/share/">随手分享</a>
+    <a class="article-category-link" href="/categories/notes/">学习笔记</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -306,10 +328,37 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。<br><a id="more"></a><br><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
-<p>通过张图能清晰快速的掌握常用HTML的分类，同时学以致用连夜做成了一个样的页面，并且对每个标签都加上了使用方法，只要点击相应标签就能访问到对应的使用方法。</p>
-<p>以下是我写的网页地址</p>
-<p><a href="https://zhangyubushiyu.github.io/HTML-Tab-PDG/" target="_blank" rel="external">常用HTML标签分类图+快速手册</a></p>
+        <h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
+<p>首先理一下思路</p>
+<ul>
+<li>方法要实现三个参数</li>
+</ul>
+</blockquote>
+<pre><code>- 请求资源 **url** 
+- 请求的查询参数 **optons**
+- 请求的回调函数 **callback** 需要接收XHLHttpRequest对象的responseTex属性作为参数
+</code></pre><a id="more"></a>
+<blockquote>
+<p>以下为封装方法</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AJAX 请求 GET 方法的封装</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">url, option, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt;<span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responseText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"get"</span>, usr, <span class="literal">true</span>);</div><div class="line">    xhr.send(<span class="literal">null</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 如果查询参数是一个对象，将其转换为对应的字符串格式</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">serialize</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span> (!data) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    <span class="keyword">var</span> pairs = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">in</span> data)&#123;</div><div class="line">        <span class="keyword">if</span> (!data.hasOwnProperty(name)) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> data[name] === <span class="string">"function"</span>) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">var</span> value =data[name].toString();</div><div class="line">        name = <span class="built_in">encodeURIComponent</span>(name); <span class="comment">// 将字符串编码为URI组件</span></div><div class="line">        value = <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">        pairs.push(name + <span class="string">"="</span> + value);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> pairs.join(<span class="string">"&amp;"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>以上两个函数都封装完毕</p>
+<ul>
+<li>使用方法举例</li>
+</ul>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">get(<span class="string">"/information"</span>, &#123;name: <span class="string">"netease"</span>, age: <span class="number">18</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="Ajax请求POST方法的封装"><a href="#Ajax请求POST方法的封装" class="headerlink" title="Ajax请求POST方法的封装"></a>Ajax请求POST方法的封装</h3><blockquote>
+<p>思路和GET是一样的</p>
+<p>下面直接进行封装</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">url, options, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responsetText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"post"</span>, url, <span class="literal">true</span>);</div><div class="line">     <span class="comment">//已表单形式提交</span></div><div class="line">    xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">    xhr.send(serialize(options));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>使用举例</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">post(<span class="string">'/addUser'</span>, &#123;name: <span class="string">'jerry'</span>, age: <span class="number">1</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="comment">// 处理返回数据</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -318,13 +367,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/08/14/HtmlTag/">常用HTML标签分类图+快速手册</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/14/Ajaxgitandpost/">AJAX GET和POST请求方法封装</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">章鱼不是鱼</a></p>
-        <p><span>发布时间:</span>2016-08-14, 00:35:42</p>
-        <p><span>最后更新:</span>2016-08-14, 00:59:55</p>
+        <p><span>发布时间:</span>2016-08-14, 18:15:58</p>
+        <p><span>最后更新:</span>2016-08-14, 19:06:59</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/08/14/HtmlTag/" title="常用HTML标签分类图+快速手册">http://www.zyblog.info/2016/08/14/HtmlTag/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.zyblog.info/2016/08/14/HtmlTag/　　作者: 章鱼不是鱼" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/14/Ajaxgitandpost/" title="AJAX GET和POST请求方法封装">http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.zyblog.info/2016/08/14/Ajaxgitandpost/　　作者: 章鱼不是鱼" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -336,16 +385,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/08/14/科学上网带你去看看外面的世界/">
-                    科学上网带你去看看外面的世界
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/08/13/hello-world/">
-                    Hello World
+                <a href="/2016/08/14/科学上网带你去看看外面的世界/">
+                    科学上网带你去看看外面的世界
                 </a>
             </div>
         
@@ -357,7 +400,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ajax请求GET方法封装"><span class="toc-number">1.</span> <span class="toc-text">Ajax请求GET方法封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Ajax请求POST方法的封装"><span class="toc-number">1.1.</span> <span class="toc-text">Ajax请求POST方法的封装</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -393,7 +436,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"常用HTML标签分类图+快速手册　| 章鱼不是鱼　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"AJAX GET和POST请求方法封装　| 章鱼不是鱼　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -412,8 +455,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://www.zyblog.info/2016/08/14/HtmlTag/';
-            this.page.identifier = '2016/08/14/HtmlTag/';
+            this.page.url = 'http://www.zyblog.info/2016/08/14/Ajaxgitandpost/';
+            this.page.identifier = '2016/08/14/Ajaxgitandpost/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -435,15 +478,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/14/科学上网带你去看看外面的世界/" title="上一篇: 科学上网带你去看看外面的世界">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/08/13/hello-world/" title="下一篇: Hello World">
+            <a href="/2016/08/14/科学上网带你去看看外面的世界/" title="下一篇: 科学上网带你去看看外面的世界">
                 <i class="fa fa-angle-right"></i>
             </a>
         

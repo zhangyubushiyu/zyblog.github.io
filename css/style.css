@@ -2135,6 +2135,7 @@ aside.comment-bar:active {
   box-shadow: none;
 }
 .article-entry .highlight {
+  background: #2d2c2d;
   border-radius: 2px;
   max-height: 50em;
   margin-top: 0.5em;

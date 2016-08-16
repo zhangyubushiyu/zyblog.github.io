@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>章鱼不是鱼</title>
+  <subtitle>梦中醒来的章鱼，前往前端路途中！</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
+  <link href="http://www.zyblog.info/"/>
+  <updated>2016-08-15T15:11:47.000Z</updated>
+  <id>http://www.zyblog.info/</id>
   
+  <author>
+    <name>章鱼不是鱼</name>
     
-    <entry>
-      <title><![CDATA[AJAX GET和POST请求方法封装]]></title>
-      <url>http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</url>
-      <content type="html"><![CDATA[<h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AJAX GET和POST请求方法封装</title>
+    <link href="http://www.zyblog.info/2016/08/14/Ajaxgitandpost/"/>
+    <id>http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</id>
+    <published>2016-08-14T10:15:58.000Z</published>
+    <updated>2016-08-15T15:11:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
 <p>首先理一下思路</p>
 <ul>
 <li>方法要实现三个参数</li>
@@ -38,12 +54,39 @@
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">post(<span class="string">'/addUser'</span>, &#123;name: <span class="string">'jerry'</span>, age: <span class="number">1</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="comment">// 处理返回数据</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[科学上网带你去看看外面的世界]]></title>
-      <url>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</url>
-      <content type="html"><![CDATA[<p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br><a id="more"></a></p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Ajax请求GET方法封装&quot;&gt;&lt;a href=&quot;#Ajax请求GET方法封装&quot; class=&quot;headerlink&quot; title=&quot;Ajax请求GET方法封装&quot;&gt;&lt;/a&gt;Ajax请求GET方法封装&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;首先理一下思路&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法要实现三个参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;- 请求资源 url
+- 请求的查询参数 optons
+- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://www.zyblog.info/categories/notes/"/>
+    
+    
+      <category term="JavaScript" scheme="http://www.zyblog.info/tags/JavaScript/"/>
+    
+      <category term="Ajax" scheme="http://www.zyblog.info/tags/Ajax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科学上网带你去看看外面的世界</title>
+    <link href="http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    <id>http://www.zyblog.info/2016/08/14/科学上网带你去看看外面的世界/</id>
+    <published>2016-08-14T02:46:53.000Z</published>
+    <updated>2016-08-14T03:34:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br><a id="more"></a></p>
 <h3 id="进入外面的世界"><a href="#进入外面的世界" class="headerlink" title="进入外面的世界"></a>进入外面的世界</h3><ul>
 <li>外面的世界 <a href="http://ss.caowb.tk" target="_blank" rel="external">ss.caowb.tk</a>。 （打开如下图）</li>
 </ul>
@@ -74,22 +117,54 @@
 <p><img src="http://i4.piimg.com/4851/d3603e50f6b14fd8.png" alt="Alt text"></p>
 <p>整个教程完毕，现在可以去外面的世界看看了！如有使用问题请联系本人。<br>如果你觉得这个网站不错不妨带上你的小伙伴一起飞。每位注册用户拥有5个延期码，你可以把邀请码发送给你的小伙伴，带着小伙伴一起飞，一起去外面的世界看看。</p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[常用HTML标签分类图+快速手册]]></title>
-      <url>http://www.zyblog.info/2016/08/14/HtmlTag/</url>
-      <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。<br><a id="more"></a><br><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
+    <summary type="html">
+    
+      &lt;p&gt;外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+    
+    
+      <category term="科学上网" scheme="http://www.zyblog.info/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用HTML标签分类图+快速手册</title>
+    <link href="http://www.zyblog.info/2016/08/14/HtmlTag/"/>
+    <id>http://www.zyblog.info/2016/08/14/HtmlTag/</id>
+    <published>2016-08-13T16:35:42.000Z</published>
+    <updated>2016-08-13T16:59:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。<br><a id="more"></a><br><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
 <p>通过张图能清晰快速的掌握常用HTML的分类，同时学以致用连夜做成了一个样的页面，并且对每个标签都加上了使用方法，只要点击相应标签就能访问到对应的使用方法。</p>
 <p>以下是我写的网页地址</p>
 <p><a href="https://zhangyubushiyu.github.io/HTML-Tab-PDG/" target="_blank" rel="external">常用HTML标签分类图+快速手册</a></p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://www.zyblog.info/2016/08/13/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <summary type="html">
+    
+      &lt;p&gt;从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+    
+    
+      <category term="HTML" scheme="http://www.zyblog.info/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.zyblog.info/2016/08/13/hello-world/"/>
+    <id>http://www.zyblog.info/2016/08/13/hello-world/</id>
+    <published>2016-08-13T07:56:53.000Z</published>
+    <updated>2016-08-13T16:27:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <a id="more"></a>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -100,8 +175,14 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
-    </entry>
     
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
-  
-</search>
+</feed>

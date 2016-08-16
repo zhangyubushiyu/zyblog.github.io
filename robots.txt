@@ -1,0 +1,8 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+
+Sitemap: http://www.zyblog.info/sitemap.xml
+Sitemap: http://www.zyblog.info/baidusitemap.xml

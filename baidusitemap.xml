@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</loc>
+    <lastmod>2016-08-15T15:11:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>AJAX GET和POST请求方法封装</title>
+        <pubTime>2016-08-14T10:15:58.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>Ajax</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://www.zyblog.info/categories/notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</loc>
+    <lastmod>2016-08-14T03:34:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>科学上网带你去看看外面的世界</title>
+        <pubTime>2016-08-14T02:46:53.000Z</pubTime>
+        
+        <tag>科学上网</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手分享" url="http://www.zyblog.info/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zyblog.info/2016/08/14/HtmlTag/</loc>
+    <lastmod>2016-08-13T16:59:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>常用HTML标签分类图+快速手册</title>
+        <pubTime>2016-08-13T16:35:42.000Z</pubTime>
+        
+        <tag>HTML</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手分享" url="http://www.zyblog.info/categories/share/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zyblog.info/2016/08/13/hello-world/</loc>
+    <lastmod>2016-08-13T16:27:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-08-13T07:56:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+</urlset>

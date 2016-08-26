@@ -280,8 +280,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/26/用于li列表和表格排序的封装/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/26/用于li列表和表格排序的封装/"></span>
         
     </a>
 
@@ -357,8 +357,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/"></span>
         
     </a>
 
@@ -434,8 +434,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/14/Ajaxgitandpost/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/14/Ajaxgitandpost/"></span>
         
     </a>
 
@@ -520,8 +520,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/14/科学上网带你去看看外面的世界/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/14/科学上网带你去看看外面的世界/"></span>
         
     </a>
 
@@ -597,8 +597,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/14/HtmlTag/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/14/HtmlTag/"></span>
         
     </a>
 
@@ -674,8 +674,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
+            <span class="ds-thread-count"  data-thread-key="2016/08/13/hello-world/" ></span>
         
-            <span class="disqus-comment-count" data-disqus-identifier="2016/08/13/hello-world/"></span>
         
     </a>
 
@@ -792,23 +792,28 @@
 
 
     
-
-    
-        <script id="dsq-count-scr" src="//zyblog.disqus.com/count.js" async></script>
         <script>
             if ($(".left-col").is(":visible")) {
-                var $disqusCount = $(".disqus-comment-count");
-                $disqusCount.bind("DOMNodeInserted", function(e) {
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    if (num > 0) {
+                var duoshuoQuery = {short_name:"zhangyuge"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
                         $(this).siblings(".count-comment").text(num);
-                    }
-                    $(this).remove();
+                        $(this).remove();
+                    })
                 })
-            } else {
-                $(".disqus-comment-count").remove();
             }
         </script>
+    
+
      
 
 

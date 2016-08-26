@@ -1,12 +1,312 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="章鱼不是鱼" />
+
+
+
+<meta name="description" content="最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用于li列表和表格排序的封装">
+<meta property="og:url" content="http://www.zyblog.info/2016/08/26/用于li列表和表格排序的封装/index.html">
+<meta property="og:site_name" content="章鱼不是鱼">
+<meta property="og:description" content="最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。">
+<meta property="og:updated_time" content="2016-08-26T16:36:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用于li列表和表格排序的封装">
+<meta name="twitter:description" content="最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="章鱼不是鱼" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>用于li列表和表格排序的封装 | 章鱼不是鱼</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">章鱼不是鱼</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">梦中醒来的章鱼，前往前端路途中！</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:zhangyuge90@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/zhangyubushiyu" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 微信" href="/751231221" title="微信"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科学上网/">科学上网</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://ss.caowb.tk/">外面的世界</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">章鱼不是鱼</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">章鱼不是鱼</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">梦中醒来的章鱼，前往前端路途中！</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:zhangyuge90@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/zhangyubushiyu" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                                <a class="fa 微信" target="_blank" href="/751231221" title="微信"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-用于li列表和表格排序的封装" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/08/26/用于li列表和表格排序的封装/" class="article-date">
+      <time datetime="2016-08-26T15:59:05.000Z" itemprop="datePublished">2016-08-26</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
     
-    <entry>
-      <title><![CDATA[用于li列表和表格排序的封装]]></title>
-      <url>http://www.zyblog.info/2016/08/26/%E7%94%A8%E4%BA%8Eli%E5%88%97%E8%A1%A8%E5%92%8C%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B0%81%E8%A3%85/</url>
-      <content type="html"><![CDATA[<p>最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。</p>
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      用于li列表和表格排序的封装
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/share/">随手分享</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。</p>
 <a id="more"></a>
 <h3 id="先来看看使用方法和说明"><a href="#先来看看使用方法和说明" class="headerlink" title="先来看看使用方法和说明"></a>先来看看使用方法和说明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * setSort函数排序使用方法</div><div class="line"> * 两个方法li() tab()</div><div class="line"> * 参数均是字符串类型</div><div class="line"> * </div><div class="line"> * li()</div><div class="line"> * 主要参数</div><div class="line"> * id---排序元素父级id</div><div class="line"> * ele---根据什么排序	传入class名</div><div class="line"> * 可选参数</div><div class="line"> * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line"> * </div><div class="line"> * tab()</div><div class="line"> * 主要参数</div><div class="line"> * tabId---table的id</div><div class="line"> * index---td哪个下标为参照	 </div><div class="line"> * 可选参数</div><div class="line"> * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line"> * </div><div class="line"> * v.1.00</div><div class="line"> */</div></pre></td></tr></table></figure>
 <h3 id="实行逻辑"><a href="#实行逻辑" class="headerlink" title="实行逻辑"></a>实行逻辑</h3><h4 id="li-方法"><a href="#li-方法" class="headerlink" title="li()方法"></a>li()方法</h4><ul>
@@ -43,167 +343,249 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">liBnt1.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setSort.li(<span class="string">'ul'</span>, <span class="string">'span'</span>); <span class="comment">//升序</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">liBnt2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setSort.li(<span class="string">'ul'</span>, <span class="string">'span'</span>, <span class="string">'sort'</span>); <span class="comment">//降序</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="完整demo"><a href="#完整demo" class="headerlink" title="完整demo"></a>完整demo</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>DOM-排序高级<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">			<span class="comment">/*</span></div><div class="line">			 * setSort函数排序使用方法</div><div class="line">			 * 两个方法li() tab()</div><div class="line">			 * 参数均是字符串类型</div><div class="line">			 * </div><div class="line">			 * li()</div><div class="line">			 * 主要参数</div><div class="line">			 * id---排序元素父级id</div><div class="line">			 * ele---根据什么排序	传入class名</div><div class="line">			 * 可选参数</div><div class="line">			 * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line">			 * </div><div class="line">			 * tab()</div><div class="line">			 * 主要参数</div><div class="line">			 * tabId---table的id</div><div class="line">			 * index---td哪个下标为参照	 </div><div class="line">			 * 可选参数</div><div class="line">			 * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line">			 * </div><div class="line">			 * v.1.00</div><div class="line">			 */</div><div class="line"></div><div class="line">			<span class="keyword">var</span> setSort = &#123;</div><div class="line">				li: <span class="function"><span class="keyword">function</span>(<span class="params">id, ele, sort</span>) </span>&#123;</div><div class="line">					<span class="keyword">var</span> id = <span class="built_in">document</span>.getElementById(id),</div><div class="line">						ele1 = id.getElementsByClassName(ele), <span class="comment">//根据什么排序</span></div><div class="line">						arr = [];</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; ele1.length; i++) &#123;</div><div class="line">						<span class="comment">//遍历到数组中</span></div><div class="line">						arr[i] = id.getElementsByClassName(ele)[i];</div><div class="line">					&#125;</div><div class="line">					<span class="comment">//排序数组</span></div><div class="line">					<span class="comment">//排序类型判断</span></div><div class="line">					<span class="keyword">if</span>(sort == <span class="string">'sort'</span>) &#123;</div><div class="line">						<span class="comment">//降序</span></div><div class="line">						arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">							<span class="keyword">var</span> a1 = <span class="built_in">parseInt</span>(a.innerHTML),</div><div class="line">								b1 = <span class="built_in">parseInt</span>(b.innerHTML);</div><div class="line">							<span class="keyword">return</span> b1 - a1;</div><div class="line">						&#125;);</div><div class="line">					&#125; <span class="keyword">else</span> &#123;</div><div class="line">						<span class="comment">//升序</span></div><div class="line">						arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">							<span class="keyword">var</span> a1 = <span class="built_in">parseInt</span>(a.innerHTML),</div><div class="line">								b1 = <span class="built_in">parseInt</span>(b.innerHTML);</div><div class="line">							<span class="keyword">return</span> a1 - b1;</div><div class="line">						&#125;);</div><div class="line">					&#125;</div><div class="line">					<span class="comment">//把排序好的数组重新插入</span></div><div class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">						id.appendChild(arr[i].parentNode);</div><div class="line">					&#125;</div><div class="line">				&#125;,</div><div class="line">				tab: <span class="function"><span class="keyword">function</span>(<span class="params">tabId, index, sort</span>) </span>&#123;</div><div class="line">					<span class="keyword">var</span> tabId = <span class="built_in">document</span>.getElementById(tabId),</div><div class="line">						tr = tabId.tBodies[<span class="number">0</span>].rows, <span class="comment">//需要排的元素</span></div><div class="line">						arr = [];</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; tr.length; i++) &#123;</div><div class="line">						arr[i] = tr[i];</div><div class="line">					&#125;</div><div class="line">					<span class="keyword">if</span>(sort == <span class="string">'sort'</span>) &#123;</div><div class="line">						<span class="comment">//降序</span></div><div class="line">						arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">							<span class="keyword">var</span> a1 = <span class="built_in">parseInt</span>(a.cells[index].innerHTML),</div><div class="line">								b1 = <span class="built_in">parseInt</span>(b.cells[index].innerHTML);</div><div class="line">							<span class="keyword">return</span> b1 - a1;</div><div class="line">						&#125;)</div><div class="line">					&#125; <span class="keyword">else</span> &#123;</div><div class="line">						<span class="comment">//升序</span></div><div class="line">						arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">							<span class="keyword">var</span> a1 = <span class="built_in">parseInt</span>(a.cells[index].innerHTML),</div><div class="line">								b1 = <span class="built_in">parseInt</span>(b.cells[index].innerHTML);</div><div class="line">							<span class="keyword">return</span> a1 - b1;</div><div class="line">						&#125;)</div><div class="line">					&#125;</div><div class="line">					<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">						tabId.tBodies[<span class="number">0</span>].appendChild(arr[i]);</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"liBtn1"</span> <span class="attr">value</span>=<span class="string">"升序"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"liBtn2"</span> <span class="attr">value</span>=<span class="string">"降序"</span> /&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"ul"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span>阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span"</span>&gt;</span>21<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span>阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span"</span>&gt;</span>20<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span>阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span"</span>&gt;</span>200<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span>阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span"</span>&gt;</span>928<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"aa"</span>&gt;</span>阅读量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span"</span>&gt;</span>218<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn1"</span> <span class="attr">value</span>=<span class="string">"年龄升序"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn2"</span> <span class="attr">value</span>=<span class="string">"年龄降序"</span> /&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"otab"</span> <span class="attr">border</span>=<span class="string">""</span> <span class="attr">cellspacing</span>=<span class="string">""</span> <span class="attr">cellpadding</span>=<span class="string">""</span> <span class="attr">style</span>=<span class="string">"width: 400px;"</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">thead</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>年龄<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">				<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></div><div class="line"></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>23<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>13<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>29<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>19<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>张三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">						<span class="tag">&lt;<span class="name">td</span>&gt;</span>20<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">					<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">				<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">			<span class="comment">/*li的排序方法*/</span></div><div class="line">			<span class="keyword">var</span> liBnt1 = <span class="built_in">document</span>.getElementById(<span class="string">'liBtn1'</span>),</div><div class="line">				liBnt2 = <span class="built_in">document</span>.getElementById(<span class="string">'liBtn2'</span>),</div><div class="line">				bnt1 = <span class="built_in">document</span>.getElementById(<span class="string">'btn1'</span>),</div><div class="line">				bnt2 = <span class="built_in">document</span>.getElementById(<span class="string">'btn2'</span>);</div><div class="line">			liBnt1.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				setSort.li(<span class="string">'ul'</span>, <span class="string">'span'</span>); <span class="comment">//升序</span></div><div class="line">			&#125;</div><div class="line">			liBnt2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				setSort.li(<span class="string">'ul'</span>, <span class="string">'span'</span>, <span class="string">'sort'</span>); <span class="comment">//降序</span></div><div class="line">			&#125;</div><div class="line"></div><div class="line">			bnt1.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				setSort.tab(<span class="string">'otab'</span>, <span class="string">'2'</span>); <span class="comment">//升序</span></div><div class="line">			&#125;</div><div class="line">			bnt2.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">				setSort.tab(<span class="string">'otab'</span>, <span class="string">'2'</span>, <span class="string">'sort'</span>); <span class="comment">//降序</span></div><div class="line">			&#125;</div><div class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
+
+      
+    </div>
     
-    <entry>
-      <title><![CDATA[利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）]]></title>
-      <url>http://www.zyblog.info/2016/08/16/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E7%BA%AF%E9%9D%99%E6%80%81Blog%E7%BD%91%E7%AB%99%20%E6%90%AD%E5%BB%BA%E7%AF%87/</url>
-      <content type="html"><![CDATA[<p>自从接触前端以来，心中有一个想法要搭建一个自己的独立博客。之前尝试wordpress，自己试用一段时间，功能虽然很强大，插件也很丰富，但是感觉不是自己想要的。后来刷知乎的时候发现hexo，不需要数据库也不需要服务器，而且使用起来简单主题美，最主要是湾湾同胞开发。<br><a id="more"></a></p>
-<h2 id="下面就开始说说搭建的过程"><a href="#下面就开始说说搭建的过程" class="headerlink" title="下面就开始说说搭建的过程"></a>下面就开始说说搭建的过程</h2><blockquote>
-<p>需要你准备的内容如下</p>
-<ul>
-<li>代码托管<a href="https://github.com/" target="_blank" rel="external"> github</a></li>
-<li>一台电脑（win mac）系统均可以</li>
-<li>电脑需要安装<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js</a> 及<a href="https://git-scm.com/" target="_blank" rel="external">git工具</a> 这两工具的安装方式见链接</li>
-</ul>
-</blockquote>
-<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><ul>
-<li><a href="https://github.com/join?source=header-home" target="_blank" rel="external"> github账号注册</a> 这个我就不说了很简单的。</li>
-</ul>
-<ul>
-<li>github新建仓库，注册之后进行登录，新建仓库方法如图<br><img src="http://i2.buimg.com/4851/bd8c3bbd8e8476ed.png" alt="image"></li>
-</ul>
-<p>注意 XXX 是需要你自己取的名子</p>
-<p><img src="http://i2.buimg.com/4851/e57ddcef3c5306bd.png" alt="image"></p>
-<ul>
-<li>对仓库建立gh-pages分支，注意所有代码都是部署到这个分支下面。<br><img src="http://i2.buimg.com/4851/2f01a644d1c2d275.png" alt="image"></li>
-</ul>
-<p>++到这里github仓库建立到这里结束++。</p>
-<h3 id="开始安装hexo"><a href="#开始安装hexo" class="headerlink" title="开始安装hexo"></a>开始安装hexo</h3><p>开始之前我们先来简单说一下什么是<a href="http://note.youdao.com/" target="_blank" rel="external">hexo</a>,这里接用几张官网首页图片。<br><img src="http://i1.buimg.com/4851/3221d27b66c46674.png" alt="hexo"><br><img src="http://i1.buimg.com/4851/ddc49d6dc2289dbd.png" alt="hexo"></p>
-<p>更多介绍请前往官网开<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">文档</a>。</p>
-<p>所有必备(node git)的应用程序安装完成后，即可使用 npm 安装 Hexo。</p>
-<ul>
-<li>在电脑端口打开命令行工具</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<ul>
-<li>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init hexo</div><div class="line">$ cd hexo</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>到这里hexo 安装就完成了。是不是很简单，后面需要就需要到hexo进行配置和部署。</p>
-<h3 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h3><ul>
-<li>请直接访问官网的 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置说明</a></li>
-</ul>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li><p>新建文章 name为文件名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo n name</div></pre></td></tr></table></figure>
-</li>
-<li><p>编译网站 </p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
-<ul>
-<li>本地启动网站</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure>
-<ul>
-<li>部署网站到github</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-<p>更多命令请参考这里<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/commands.html</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[AJAX GET和POST请求方法封装]]></title>
-      <url>http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</url>
-      <content type="html"><![CDATA[<h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
-<p>首先理一下思路</p>
-<ul>
-<li>方法要实现三个参数</li>
-</ul>
-</blockquote>
-<pre><code>- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数
-</code></pre><a id="more"></a>
-<blockquote>
-<p>以下为封装方法</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AJAX 请求 GET 方法的封装</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">url, option, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt;<span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responseText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"get"</span>, usr, <span class="literal">true</span>);</div><div class="line">    xhr.send(<span class="literal">null</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 如果查询参数是一个对象，将其转换为对应的字符串格式</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">serialize</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span> (!data) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    <span class="keyword">var</span> pairs = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">in</span> data)&#123;</div><div class="line">        <span class="keyword">if</span> (!data.hasOwnProperty(name)) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> data[name] === <span class="string">"function"</span>) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">var</span> value =data[name].toString();</div><div class="line">        name = <span class="built_in">encodeURIComponent</span>(name); <span class="comment">// 将字符串编码为URI组件</span></div><div class="line">        value = <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">        pairs.push(name + <span class="string">"="</span> + value);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> pairs.join(<span class="string">"&amp;"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>以上两个函数都封装完毕</p>
-<ul>
-<li>使用方法举例</li>
-</ul>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">get(<span class="string">"/information"</span>, &#123;name: <span class="string">"netease"</span>, age: <span class="number">18</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<hr>
-<h3 id="Ajax请求POST方法的封装"><a href="#Ajax请求POST方法的封装" class="headerlink" title="Ajax请求POST方法的封装"></a>Ajax请求POST方法的封装</h3><blockquote>
-<p>思路和GET是一样的</p>
-<p>下面直接进行封装</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">url, options, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responsetText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"post"</span>, url, <span class="literal">true</span>);</div><div class="line">     <span class="comment">//已表单形式提交</span></div><div class="line">    xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">    xhr.send(serialize(options));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>使用举例</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">post(<span class="string">'/addUser'</span>, &#123;name: <span class="string">'jerry'</span>, age: <span class="number">1</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="comment">// 处理返回数据</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[科学上网带你去看看外面的世界]]></title>
-      <url>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</url>
-      <content type="html"><![CDATA[<p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br><a id="more"></a></p>
-<h3 id="进入外面的世界"><a href="#进入外面的世界" class="headerlink" title="进入外面的世界"></a>进入外面的世界</h3><ul>
-<li>外面的世界 <a href="http://ss.caowb.tk" target="_blank" rel="external">ss.caowb.tk</a>。 （打开如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/bc37e93b99b2f280.png" alt="Alt text"></p>
-<h3 id="邀请码"><a href="#邀请码" class="headerlink" title="邀请码"></a>邀请码</h3><ul>
-<li>点击右侧菜单下面的邀请码，目前只支持邀请码进行注册。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/494309a8198d87a5.jpg" alt="Alt text"></p>
-<h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><ul>
-<li>填写注册信息进行注册。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/9757540e48498700.jpg" alt="Alt text"></p>
-<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><ul>
-<li>在注册成功之后会跳转到首页，需要点击左边的登录按钮进行登录。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/4708858761f0b456.png" alt="Alt text"></p>
-<h3 id="熟悉"><a href="#熟悉" class="headerlink" title="熟悉"></a>熟悉</h3><ul>
-<li>登录成功之后来到后台主页，进行简单的了接和使用方法。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/e05842d9bf666340.png" alt="Alt text"></p>
-<h3 id="点击节点列表"><a href="#点击节点列表" class="headerlink" title="点击节点列表"></a>点击节点列表</h3><ul>
-<li>会看到目前能使用的节点。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/97043e496e01bcea.png" alt="Alt text"></p>
-<h3 id="选择节点"><a href="#选择节点" class="headerlink" title="选择节点"></a>选择节点</h3><ul>
-<li>节点的对应自己的账户信息。（如下图）</li>
-</ul>
-<p><img src="http://i4.piimg.com/4851/d3603e50f6b14fd8.png" alt="Alt text"></p>
-<p>整个教程完毕，现在可以去外面的世界看看了！如有使用问题请联系本人。<br>如果你觉得这个网站不错不妨带上你的小伙伴一起飞。每位注册用户拥有5个延期码，你可以把邀请码发送给你的小伙伴，带着小伙伴一起飞，一起去外面的世界看看。</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[常用HTML标签分类图+快速手册]]></title>
-      <url>http://www.zyblog.info/2016/08/14/HtmlTag/</url>
-      <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。<br><a id="more"></a><br><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
-<p>通过张图能清晰快速的掌握常用HTML的分类，同时学以致用连夜做成了一个样的页面，并且对每个标签都加上了使用方法，只要点击相应标签就能访问到对应的使用方法。</p>
-<p>以下是我写的网页地址</p>
-<p><a href="https://zhangyubushiyu.github.io/HTML-Tab-PDG/" target="_blank" rel="external">常用HTML标签分类图+快速手册</a></p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://www.zyblog.info/2016/08/13/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
+  </div>
   
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/26/用于li列表和表格排序的封装/">用于li列表和表格排序的封装</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">章鱼不是鱼</a></p>
+        <p><span>发布时间:</span>2016-08-26, 23:59:05</p>
+        <p><span>最后更新:</span>2016-08-27, 00:36:38</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/26/用于li列表和表格排序的封装/" title="用于li列表和表格排序的封装">http://www.zyblog.info/2016/08/26/用于li列表和表格排序的封装/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.zyblog.info/2016/08/26/用于li列表和表格排序的封装/　　作者: 章鱼不是鱼" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/">
+                    利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）
+                </a>
+            </div>
+        
+    </nav>
+
   
-</search>
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#先来看看使用方法和说明"><span class="toc-number">1.</span> <span class="toc-text">先来看看使用方法和说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实行逻辑"><span class="toc-number">2.</span> <span class="toc-text">实行逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#li-方法"><span class="toc-number">2.1.</span> <span class="toc-text">li()方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tab"><span class="toc-number">2.2.</span> <span class="toc-text">tab()</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#tBodies方法"><span class="toc-number">2.2.1.</span> <span class="toc-text">tBodies方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#rows方法"><span class="toc-number">2.2.2.</span> <span class="toc-text">rows方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#cells方法"><span class="toc-number">2.2.3.</span> <span class="toc-text">cells方法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方法"><span class="toc-number">3.</span> <span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完整demo"><span class="toc-number">4.</span> <span class="toc-text">完整demo</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"用于li列表和表格排序的封装　| 章鱼不是鱼　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'http://www.zyblog.info/2016/08/26/用于li列表和表格排序的封装/';
+            this.page.identifier = '2016/08/26/用于li列表和表格排序的封装/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//zyblog.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/" title="下一篇: 利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/用于li列表和表格排序的封装/">用于li列表和表格排序的封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/">利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/14/Ajaxgitandpost/">AJAX GET和POST请求方法封装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/14/科学上网带你去看看外面的世界/">科学上网带你去看看外面的世界</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/14/HtmlTag/">常用HTML标签分类图+快速手册</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/13/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 章鱼不是鱼
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  </div>
+</body>
+</html>

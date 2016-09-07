@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[前端团队协同开发CSS规范制定]]></title>
-      <url>http://www.zyblog.info/2016/08/28/%E5%9B%A2%E9%98%9F%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91CSS%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A/</url>
+      <url>http://www.zyblog.info/2016/08/28/cas/</url>
       <content type="html"><![CDATA[<p>自己来总结一下前端开发中关于CSS部分的团队开发规范。</p>
 <a id="more"></a>
 <h3 id="文件规范"><a href="#文件规范" class="headerlink" title="文件规范"></a>文件规范</h3><blockquote>
@@ -116,7 +116,7 @@
     
     <entry>
       <title><![CDATA[用于li列表和表格排序的封装]]></title>
-      <url>http://www.zyblog.info/2016/08/26/%E7%94%A8%E4%BA%8Eli%E5%88%97%E8%A1%A8%E5%92%8C%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B0%81%E8%A3%85/</url>
+      <url>http://www.zyblog.info/2016/08/26/js/</url>
       <content type="html"><![CDATA[<p>最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。</p>
 <a id="more"></a>
 <h3 id="先来看看使用方法和说明"><a href="#先来看看使用方法和说明" class="headerlink" title="先来看看使用方法和说明"></a>先来看看使用方法和说明</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"> * setSort函数排序使用方法</div><div class="line"> * 两个方法li() tab()</div><div class="line"> * 参数均是字符串类型</div><div class="line"> * </div><div class="line"> * li()</div><div class="line"> * 主要参数</div><div class="line"> * id---排序元素父级id</div><div class="line"> * ele---根据什么排序	传入class名</div><div class="line"> * 可选参数</div><div class="line"> * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line"> * </div><div class="line"> * tab()</div><div class="line"> * 主要参数</div><div class="line"> * tabId---table的id</div><div class="line"> * index---td哪个下标为参照	 </div><div class="line"> * 可选参数</div><div class="line"> * sort---排序类型 不带默认为升序 带这个参数为降序</div><div class="line"> * </div><div class="line"> * v.1.00</div><div class="line"> */</div></pre></td></tr></table></figure>
@@ -159,7 +159,7 @@
     
     <entry>
       <title><![CDATA[利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）]]></title>
-      <url>http://www.zyblog.info/2016/08/16/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E7%BA%AF%E9%9D%99%E6%80%81Blog%E7%BD%91%E7%AB%99%20%E6%90%AD%E5%BB%BA%E7%AF%87/</url>
+      <url>http://www.zyblog.info/2016/08/16/github-hexo/</url>
       <content type="html"><![CDATA[<p>自从接触前端以来，心中有一个想法要搭建一个自己的独立博客。之前尝试wordpress，自己试用一段时间，功能虽然很强大，插件也很丰富，但是感觉不是自己想要的。后来刷知乎的时候发现hexo，不需要数据库也不需要服务器，而且使用起来简单主题美，最主要是湾湾同胞开发。</p>
 <a id="more"></a>
 <h2 id="下面就开始说说搭建的过程"><a href="#下面就开始说说搭建的过程" class="headerlink" title="下面就开始说说搭建的过程"></a>下面就开始说说搭建的过程</h2><blockquote>
@@ -256,7 +256,7 @@
     
     <entry>
       <title><![CDATA[科学上网带你去看看外面的世界]]></title>
-      <url>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</url>
+      <url>http://www.zyblog.info/2016/08/14/SS-get/</url>
       <content type="html"><![CDATA[<p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br><a id="more"></a></p>
 <h3 id="进入外面的世界"><a href="#进入外面的世界" class="headerlink" title="进入外面的世界"></a>进入外面的世界</h3><ul>
 <li>外面的世界 <a href="http://ss.caowb.tk" target="_blank" rel="external">ss.caowb.tk</a>。 （打开如下图）</li>
@@ -292,7 +292,7 @@
     
     <entry>
       <title><![CDATA[常用HTML标签分类图+快速手册]]></title>
-      <url>http://www.zyblog.info/2016/08/14/HtmlTag/</url>
+      <url>http://www.zyblog.info/2016/08/14/htmtlTag/</url>
       <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。</p>
 <a id="more"></a>
 <p><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>

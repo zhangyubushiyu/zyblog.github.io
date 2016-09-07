@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zyblog.info/"/>
-  <updated>2016-08-28T11:14:16.000Z</updated>
+  <updated>2016-09-07T08:12:25.000Z</updated>
   <id>http://www.zyblog.info/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.zyblog.info/2016/08/28/%E5%9B%A2%E9%98%9F%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91CSS%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A/"/>
     <id>http://www.zyblog.info/2016/08/28/团队协同开发CSS规范制定/</id>
     <published>2016-08-28T10:51:11.000Z</published>
-    <updated>2016-08-28T11:14:16.000Z</updated>
+    <updated>2016-09-07T08:12:25.000Z</updated>
     
     <content type="html"><![CDATA[<p>自己来总结一下前端开发中关于CSS部分的团队开发规范。</p>
 <a id="more"></a>
@@ -135,9 +135,9 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://www.zyblog.info/categories/notes/"/>
+      <category term="学习笔记" scheme="http://www.zyblog.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="随手分享" scheme="http://www.zyblog.info/categories/notes/share/"/>
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9A%8F%E6%89%8B%E5%88%86%E4%BA%AB/"/>
     
     
       <category term="前端规范" scheme="http://www.zyblog.info/tags/%E5%89%8D%E7%AB%AF%E8%A7%84%E8%8C%83/"/>
@@ -151,7 +151,7 @@
     <link href="http://www.zyblog.info/2016/08/26/%E7%94%A8%E4%BA%8Eli%E5%88%97%E8%A1%A8%E5%92%8C%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B0%81%E8%A3%85/"/>
     <id>http://www.zyblog.info/2016/08/26/用于li列表和表格排序的封装/</id>
     <published>2016-08-26T15:59:05.000Z</published>
-    <updated>2016-08-26T16:36:38.000Z</updated>
+    <updated>2016-09-07T08:12:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。</p>
 <a id="more"></a>
@@ -198,7 +198,7 @@
     
     </summary>
     
-      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/%E9%9A%8F%E6%89%8B%E5%88%86%E4%BA%AB/"/>
     
     
       <category term="JavaScript" scheme="http://www.zyblog.info/tags/JavaScript/"/>
@@ -210,7 +210,7 @@
     <link href="http://www.zyblog.info/2016/08/16/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E7%BA%AF%E9%9D%99%E6%80%81Blog%E7%BD%91%E7%AB%99%20%E6%90%AD%E5%BB%BA%E7%AF%87/"/>
     <id>http://www.zyblog.info/2016/08/16/利用GitHub+Hexo搭建纯静态Blog网站 搭建篇/</id>
     <published>2016-08-16T07:25:51.000Z</published>
-    <updated>2016-08-16T08:46:23.000Z</updated>
+    <updated>2016-09-07T08:13:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>自从接触前端以来，心中有一个想法要搭建一个自己的独立博客。之前尝试wordpress，自己试用一段时间，功能虽然很强大，插件也很丰富，但是感觉不是自己想要的。后来刷知乎的时候发现hexo，不需要数据库也不需要服务器，而且使用起来简单主题美，最主要是湾湾同胞开发。<br><a id="more"></a></p>
 <h2 id="下面就开始说说搭建的过程"><a href="#下面就开始说说搭建的过程" class="headerlink" title="下面就开始说说搭建的过程"></a>下面就开始说说搭建的过程</h2><blockquote>
@@ -273,7 +273,9 @@
     
     </summary>
     
-      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+      <category term="学习笔记" scheme="http://www.zyblog.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9A%8F%E6%89%8B%E5%88%86%E4%BA%AB/"/>
     
     
       <category term="github" scheme="http://www.zyblog.info/tags/github/"/>
@@ -337,7 +339,7 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://www.zyblog.info/categories/notes/"/>
+      <category term="学习笔记" scheme="http://www.zyblog.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="JavaScript" scheme="http://www.zyblog.info/tags/JavaScript/"/>
@@ -351,7 +353,7 @@
     <link href="http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/"/>
     <id>http://www.zyblog.info/2016/08/14/科学上网带你去看看外面的世界/</id>
     <published>2016-08-14T02:46:53.000Z</published>
-    <updated>2016-08-14T03:34:57.000Z</updated>
+    <updated>2016-09-07T08:12:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br><a id="more"></a></p>
 <h3 id="进入外面的世界"><a href="#进入外面的世界" class="headerlink" title="进入外面的世界"></a>进入外面的世界</h3><ul>
@@ -391,7 +393,7 @@
     
     </summary>
     
-      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/%E9%9A%8F%E6%89%8B%E5%88%86%E4%BA%AB/"/>
     
     
       <category term="科学上网" scheme="http://www.zyblog.info/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
@@ -403,9 +405,11 @@
     <link href="http://www.zyblog.info/2016/08/14/HtmlTag/"/>
     <id>http://www.zyblog.info/2016/08/14/HtmlTag/</id>
     <published>2016-08-13T16:35:42.000Z</published>
-    <updated>2016-08-13T16:59:55.000Z</updated>
+    <updated>2016-09-07T08:12:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。<br><a id="more"></a><br><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
+    <content type="html"><![CDATA[<p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。</p>
+<a id="more"></a>
+<p><img src="http://nos.netease.com/edu-image/E06A8D445FF610DCF566CE1CD267D32D.png?imageView&amp;thumbnail=520x520&amp;quality=100" alt="alt text" title="Title"></p>
 <p>通过张图能清晰快速的掌握常用HTML的分类，同时学以致用连夜做成了一个样的页面，并且对每个标签都加上了使用方法，只要点击相应标签就能访问到对应的使用方法。</p>
 <p>以下是我写的网页地址</p>
 <p><a href="https://zhangyubushiyu.github.io/HTML-Tab-PDG/" target="_blank" rel="external">常用HTML标签分类图+快速手册</a></p>
@@ -413,42 +417,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。&lt;br&gt;
+      &lt;p&gt;从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。&lt;/p&gt;
     
     </summary>
     
-      <category term="随手分享" scheme="http://www.zyblog.info/categories/share/"/>
+      <category term="随手分享" scheme="http://www.zyblog.info/categories/%E9%9A%8F%E6%89%8B%E5%88%86%E4%BA%AB/"/>
     
     
       <category term="HTML" scheme="http://www.zyblog.info/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.zyblog.info/2016/08/13/hello-world/"/>
-    <id>http://www.zyblog.info/2016/08/13/hello-world/</id>
-    <published>2016-08-13T07:56:53.000Z</published>
-    <updated>2016-08-13T16:27:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
     
   </entry>
   

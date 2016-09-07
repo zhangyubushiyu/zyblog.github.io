@@ -2,23 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.zyblog.info/2016/08/16/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E7%BA%AF%E9%9D%99%E6%80%81Blog%E7%BD%91%E7%AB%99%20%E6%90%AD%E5%BB%BA%E7%AF%87/</loc>
+    
+    <lastmod>2016-09-07T08:13:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.zyblog.info/2016/08/28/%E5%9B%A2%E9%98%9F%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91CSS%E8%A7%84%E8%8C%83%E5%88%B6%E5%AE%9A/</loc>
     
-    <lastmod>2016-08-28T11:14:16.000Z</lastmod>
+    <lastmod>2016-09-07T08:12:25.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.zyblog.info/2016/08/26/%E7%94%A8%E4%BA%8Eli%E5%88%97%E8%A1%A8%E5%92%8C%E8%A1%A8%E6%A0%BC%E6%8E%92%E5%BA%8F%E7%9A%84%E5%B0%81%E8%A3%85/</loc>
     
-    <lastmod>2016-08-26T16:36:38.000Z</lastmod>
+    <lastmod>2016-09-07T08:12:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.zyblog.info/2016/08/16/%E5%88%A9%E7%94%A8GitHub+Hexo%E6%90%AD%E5%BB%BA%E7%BA%AF%E9%9D%99%E6%80%81Blog%E7%BD%91%E7%AB%99%20%E6%90%AD%E5%BB%BA%E7%AF%87/</loc>
+    <loc>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</loc>
     
-    <lastmod>2016-08-16T08:46:23.000Z</lastmod>
+    <lastmod>2016-09-07T08:12:16.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zyblog.info/2016/08/14/HtmlTag/</loc>
+    
+    <lastmod>2016-09-07T08:12:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zyblog.info/tags/index.html</loc>
+    
+    <lastmod>2016-09-07T08:10:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zyblog.info/categories/index.html</loc>
+    
+    <lastmod>2016-09-07T08:10:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zyblog.info//404.html</loc>
+    
+    <lastmod>2016-09-07T04:25:22.000Z</lastmod>
     
   </url>
   
@@ -26,41 +61,6 @@
     <loc>http://www.zyblog.info/2016/08/14/Ajaxgitandpost/</loc>
     
     <lastmod>2016-08-15T15:11:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info/2016/08/14/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B8%A6%E4%BD%A0%E5%8E%BB%E7%9C%8B%E7%9C%8B%E5%A4%96%E9%9D%A2%E7%9A%84%E4%B8%96%E7%95%8C/</loc>
-    
-    <lastmod>2016-08-14T03:34:57.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info/2016/08/14/HtmlTag/</loc>
-    
-    <lastmod>2016-08-13T16:59:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info/2016/08/13/hello-world/</loc>
-    
-    <lastmod>2016-08-13T16:27:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info/tags/index.html</loc>
-    
-    <lastmod>2016-08-13T16:24:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info//404.html</loc>
-    
-    <lastmod>2016-08-13T15:36:20.000Z</lastmod>
     
   </url>
   

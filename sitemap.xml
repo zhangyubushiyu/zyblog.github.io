@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.zyblog.info/about/index.html</loc>
+    
+    <lastmod>2016-09-08T08:14:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.zyblog.info/2016/09/08/js/</loc>
     
     <lastmod>2016-09-08T07:11:25.000Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://www.zyblog.info/2016/08/14/htmtlTag/</loc>
     
     <lastmod>2016-09-07T09:26:09.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info/about/index.html</loc>
-    
-    <lastmod>2016-09-07T08:22:03.000Z</lastmod>
     
   </url>
   

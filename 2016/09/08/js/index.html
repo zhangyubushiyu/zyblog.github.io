@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,Ajax," />
+  <meta name="keywords" content="JavaScript,JS兼容," />
 
 
 
@@ -86,40 +86,16 @@
 
 
 
-<meta name="description" content="Ajax请求GET方法封装
-首先理一下思路
-
-方法要实现三个参数
-
-
-- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数">
+<meta name="description" content="12345678910111213141516171819202122232425262728function getElementsByClassName(ele, name) &amp;#123;	//先检测是否支持原生的getElementsByClassName	if(ele.getElementsByClassName) &amp;#123;		return ele.getElementsByClass">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX GET和POST请求方法封装">
-<meta property="og:url" content="http://www.zyblog.info/2016/08/14/Ajaxgitandpost/index.html">
+<meta property="og:title" content="让JavaScript的getElementsByClassName兼容iE8方法">
+<meta property="og:url" content="http://www.zyblog.info/2016/09/08/js/index.html">
 <meta property="og:site_name" content="章鱼不是鱼">
-<meta property="og:description" content="Ajax请求GET方法封装
-首先理一下思路
-
-方法要实现三个参数
-
-
-- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数">
-<meta property="og:updated_time" content="2016-08-15T15:11:47.000Z">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728function getElementsByClassName(ele, name) &amp;#123;	//先检测是否支持原生的getElementsByClassName	if(ele.getElementsByClassName) &amp;#123;		return ele.getElementsByClass">
+<meta property="og:updated_time" content="2016-09-08T07:11:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AJAX GET和POST请求方法封装">
-<meta name="twitter:description" content="Ajax请求GET方法封装
-首先理一下思路
-
-方法要实现三个参数
-
-
-- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数">
+<meta name="twitter:title" content="让JavaScript的getElementsByClassName兼容iE8方法">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728function getElementsByClassName(ele, name) &amp;#123;	//先检测是否支持原生的getElementsByClassName	if(ele.getElementsByClassName) &amp;#123;		return ele.getElementsByClass">
 
 
 
@@ -140,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://www.zyblog.info/2016/08/14/Ajaxgitandpost/"/>
+  <link rel="canonical" href="http://www.zyblog.info/2016/09/08/js/"/>
 
-  <title> AJAX GET和POST请求方法封装 | 章鱼不是鱼 </title>
+  <title> 让JavaScript的getElementsByClassName兼容iE8方法 | 章鱼不是鱼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -325,7 +301,7 @@
             
             
               
-                AJAX GET和POST请求方法封装
+                让JavaScript的getElementsByClassName兼容iE8方法
               
             
           </h1>
@@ -337,8 +313,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-14T18:15:58+08:00" content="2016-08-14">
-              2016-08-14
+            <time itemprop="dateCreated" datetime="2016-09-08T14:52:52+08:00" content="2016-09-08">
+              2016-09-08
             </time>
           </span>
 
@@ -351,8 +327,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/随手分享/" itemprop="url" rel="index">
+                    <span itemprop="name">随手分享</span>
                   </a>
                 </span>
 
@@ -367,8 +343,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/14/Ajaxgitandpost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/Ajaxgitandpost/" itemprop="commentsCount"></span>
+                <a href="/2016/09/08/js/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/js/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -396,37 +372,20 @@
       
 
       
-        <h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
-<p>首先理一下思路</p>
-<ul>
-<li>方法要实现三个参数</li>
-</ul>
-</blockquote>
-<pre><code>- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数
-</code></pre><a id="more"></a>
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">ele, name</span>) </span>&#123;</div><div class="line">	<span class="comment">//先检测是否支持原生的getElementsByClassName</span></div><div class="line">	<span class="keyword">if</span>(ele.getElementsByClassName) &#123;</div><div class="line">		<span class="keyword">return</span> ele.getElementsByClassName(name);</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="comment">//如果不支持就通过getElementsByTagName匹配所有标签，默认在目标元素下查找</span></div><div class="line">		<span class="keyword">var</span> children = (ele || <span class="built_in">document</span>).getElementsByTagName(<span class="string">'*'</span>);</div><div class="line">		<span class="comment">//定义一个空数组，用于后续储存符合条件的元素</span></div><div class="line">		<span class="keyword">var</span> elements = [];</div><div class="line">		<span class="comment">//第一次通过byTagName循环遍历目标元素下的所有元素</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; children.length; i++) &#123;</div><div class="line">			<span class="keyword">var</span> child = children[i];</div><div class="line">			<span class="comment">//通过空格分隔元素的class名称</span></div><div class="line">			<span class="keyword">var</span> classNames = child.className.split(<span class="string">''</span>);</div><div class="line">			<span class="comment">//再次循环遍历元素的className</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; classNames.length; j++) &#123;</div><div class="line">				<span class="comment">//类名和传入的class相同时，通过push推到之前新建的空数组里</span></div><div class="line">				<span class="keyword">if</span>(classNames[j] === name) &#123;</div><div class="line">					elements.push(child);</div><div class="line">					<span class="comment">//找到后就跳出循环</span></div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">//最后返回数组</span></div><div class="line">		<span class="keyword">return</span> elements;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <blockquote>
-<p>以下为封装方法</p>
+<p>使用方法</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AJAX 请求 GET 方法的封装</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">url, option, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt;<span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responseText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"get"</span>, usr, <span class="literal">true</span>);</div><div class="line">    xhr.send(<span class="literal">null</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 如果查询参数是一个对象，将其转换为对应的字符串格式</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">serialize</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span> (!data) <span class="keyword">return</span> <span class="string">""</span>;</div><div class="line">    <span class="keyword">var</span> pairs = [];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">in</span> data)&#123;</div><div class="line">        <span class="keyword">if</span> (!data.hasOwnProperty(name)) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> data[name] === <span class="string">"function"</span>) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">var</span> value =data[name].toString();</div><div class="line">        name = <span class="built_in">encodeURIComponent</span>(name); <span class="comment">// 将字符串编码为URI组件</span></div><div class="line">        value = <span class="built_in">encodeURIComponent</span>(value);</div><div class="line">        pairs.push(name + <span class="string">"="</span> + value);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> pairs.join(<span class="string">"&amp;"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>以上两个函数都封装完毕</p>
-<ul>
-<li>使用方法举例</li>
-</ul>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">get(<span class="string">"/information"</span>, &#123;name: <span class="string">"netease"</span>, age: <span class="number">18</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list=<span class="built_in">document</span>.getElementById(<span class="string">'list'</span>),</div><div class="line">	listS=list.getElementsByClassName(list,<span class="string">'list-s'</span>);</div></pre></td></tr></table></figure>
 <hr>
-<h3 id="Ajax请求POST方法的封装"><a href="#Ajax请求POST方法的封装" class="headerlink" title="Ajax请求POST方法的封装"></a>Ajax请求POST方法的封装</h3><blockquote>
-<p>思路和GET是一样的</p>
-<p>下面直接进行封装</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">url, options, callback</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> url = url +<span class="string">"?"</span> + serialize(option);</div><div class="line">    <span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> XMLHttpRequest() : <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>)&#123;</div><div class="line">            <span class="keyword">if</span> ((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status ===<span class="number">304</span>)&#123;</div><div class="line">                callback(xhr.responsetText);</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                alert(<span class="string">"请求失败"</span> + xhr.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.open(<span class="string">"post"</span>, url, <span class="literal">true</span>);</div><div class="line">     <span class="comment">//已表单形式提交</span></div><div class="line">    xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line">    xhr.send(serialize(options));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>使用举例</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">post(<span class="string">'/addUser'</span>, &#123;name: <span class="string">'jerry'</span>, age: <span class="number">1</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="comment">// 处理返回数据</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>getElementsByClassName传入的两个参数，</li>
+</ul>
+<ol>
+<li>第一个参数为id节点</li>
+<li>第二个参数为这个id节点下面的子孙class节点。</li>
+</ol>
 
       
     </div>
@@ -451,7 +410,7 @@
           
             <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
-            <a href="/tags/Ajax/" rel="tag">#Ajax</a>
+            <a href="/tags/JS兼容/" rel="tag">#JS兼容</a>
           
         </div>
       
@@ -460,17 +419,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/14/SS-get/" rel="next" title="科学上网带你去看看外面的世界">
-                <i class="fa fa-chevron-left"></i> 科学上网带你去看看外面的世界
+              <a href="/2016/08/28/cas/" rel="next" title="前端团队协同开发CSS规范制定">
+                <i class="fa fa-chevron-left"></i> 前端团队协同开发CSS规范制定
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/16/github-hexo/" rel="prev" title="利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）">
-                利用GitHub+Hexo搭建纯静态Blog网站（搭建篇） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,8 +457,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/14/Ajaxgitandpost/"
-           data-title="AJAX GET和POST请求方法封装" data-url="http://www.zyblog.info/2016/08/14/Ajaxgitandpost/">
+      <div class="ds-thread" data-thread-key="2016/09/08/js/"
+           data-title="让JavaScript的getElementsByClassName兼容iE8方法" data-url="http://www.zyblog.info/2016/09/08/js/">
       </div>
     
   </div>
@@ -635,7 +590,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax请求GET方法封装"><span class="nav-number">1.</span> <span class="nav-text">Ajax请求GET方法封装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax请求POST方法的封装"><span class="nav-number">1.1.</span> <span class="nav-text">Ajax请求POST方法的封装</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>

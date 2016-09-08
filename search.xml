@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[让JavaScript的getElementsByClassName兼容iE8方法]]></title>
+      <url>http://www.zyblog.info/2016/09/08/js/</url>
+      <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">ele, name</span>) </span>&#123;</div><div class="line">	<span class="comment">//先检测是否支持原生的getElementsByClassName</span></div><div class="line">	<span class="keyword">if</span>(ele.getElementsByClassName) &#123;</div><div class="line">		<span class="keyword">return</span> ele.getElementsByClassName(name);</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="comment">//如果不支持就通过getElementsByTagName匹配所有标签，默认在目标元素下查找</span></div><div class="line">		<span class="keyword">var</span> children = (ele || <span class="built_in">document</span>).getElementsByTagName(<span class="string">'*'</span>);</div><div class="line">		<span class="comment">//定义一个空数组，用于后续储存符合条件的元素</span></div><div class="line">		<span class="keyword">var</span> elements = [];</div><div class="line">		<span class="comment">//第一次通过byTagName循环遍历目标元素下的所有元素</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; children.length; i++) &#123;</div><div class="line">			<span class="keyword">var</span> child = children[i];</div><div class="line">			<span class="comment">//通过空格分隔元素的class名称</span></div><div class="line">			<span class="keyword">var</span> classNames = child.className.split(<span class="string">''</span>);</div><div class="line">			<span class="comment">//再次循环遍历元素的className</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; classNames.length; j++) &#123;</div><div class="line">				<span class="comment">//类名和传入的class相同时，通过push推到之前新建的空数组里</span></div><div class="line">				<span class="keyword">if</span>(classNames[j] === name) &#123;</div><div class="line">					elements.push(child);</div><div class="line">					<span class="comment">//找到后就跳出循环</span></div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">//最后返回数组</span></div><div class="line">		<span class="keyword">return</span> elements;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p>使用方法</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> list=<span class="built_in">document</span>.getElementById(<span class="string">'list'</span>),</div><div class="line">	listS=list.getElementsByClassName(list,<span class="string">'list-s'</span>);</div></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>getElementsByClassName传入的两个参数，</li>
+</ul>
+<ol>
+<li>第一个参数为id节点</li>
+<li>第二个参数为这个id节点下面的子孙class节点。</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[前端团队协同开发CSS规范制定]]></title>
       <url>http://www.zyblog.info/2016/08/28/cas/</url>
       <content type="html"><![CDATA[<p>自己来总结一下前端开发中关于CSS部分的团队开发规范。</p>

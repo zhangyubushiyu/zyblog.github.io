@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -86,15 +86,34 @@
 
 
 
-<meta name="description" content="一条自我救赎的章鱼！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="章鱼不是鱼">
-<meta property="og:url" content="http://www.zyblog.info/index.html">
+<meta name="description" content="有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。
+首先HTML+CSS部分
+想要实现元素拖拽能移动，首先这个元素必须使用定位进行布局。
+
+HTML假设有以一下HTML布局。
+123&amp;lt;div id=&quot;box&quot;&amp;gt;	&amp;lt;div id=&quot;div1&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+CSS对应CS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生javascript实现鼠标拖拽移动元素">
+<meta property="og:url" content="http://www.zyblog.info/2016/09/09/js/index.html">
 <meta property="og:site_name" content="章鱼不是鱼">
-<meta property="og:description" content="一条自我救赎的章鱼！">
+<meta property="og:description" content="有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。
+首先HTML+CSS部分
+想要实现元素拖拽能移动，首先这个元素必须使用定位进行布局。
+
+HTML假设有以一下HTML布局。
+123&amp;lt;div id=&quot;box&quot;&amp;gt;	&amp;lt;div id=&quot;div1&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+CSS对应CS">
+<meta property="og:updated_time" content="2016-09-09T06:52:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="章鱼不是鱼">
-<meta name="twitter:description" content="一条自我救赎的章鱼！">
+<meta name="twitter:title" content="原生javascript实现鼠标拖拽移动元素">
+<meta name="twitter:description" content="有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。
+首先HTML+CSS部分
+想要实现元素拖拽能移动，首先这个元素必须使用定位进行布局。
+
+HTML假设有以一下HTML布局。
+123&amp;lt;div id=&quot;box&quot;&amp;gt;	&amp;lt;div id=&quot;div1&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+CSS对应CS">
 
 
 
@@ -115,9 +134,9 @@
 
 
 
-  <link rel="canonical" href="http://www.zyblog.info/"/>
+  <link rel="canonical" href="http://www.zyblog.info/2016/09/09/js/"/>
 
-  <title> 章鱼不是鱼 </title>
+  <title> 原生javascript实现鼠标拖拽移动元素 | 章鱼不是鱼 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,9 +167,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,9 +297,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -302,10 +319,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/09/09/js/" itemprop="url">
-                  原生javascript实现鼠标拖拽移动元素
-                </a>
+                原生javascript实现鼠标拖拽移动元素
               
             
           </h1>
@@ -360,6 +374,11 @@
           
 
           
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
         </div>
       </header>
     
@@ -371,9 +390,7 @@
       
 
       
-        
-          
-            <p>有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。</p>
+        <p>有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。</p>
 <h2 id="首先HTML-CSS部分"><a href="#首先HTML-CSS部分" class="headerlink" title="首先HTML+CSS部分"></a>首先HTML+CSS部分</h2><blockquote>
 <p>想要实现元素拖拽能移动，首先这个元素必须使用定位进行布局。</p>
 </blockquote>
@@ -433,899 +450,65 @@
 <p>到这里整个方法完成。</p>
 </blockquote>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/08/js/" itemprop="url">
-                  让JavaScript的getElementsByClassName兼容iE8方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-08T14:52:52+08:00" content="2016-09-08">
-              2016-09-08
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/08/js/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/08/js/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElementsByClassName</span>(<span class="params">ele, name</span>) </span>&#123;</div><div class="line">	<span class="comment">//先检测是否支持原生的getElementsByClassName</span></div><div class="line">	<span class="keyword">if</span>(ele.getElementsByClassName) &#123;</div><div class="line">		<span class="keyword">return</span> ele.getElementsByClassName(name);</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		<span class="comment">//如果不支持就通过getElementsByTagName匹配所有标签，默认在目标元素下查找</span></div><div class="line">		<span class="keyword">var</span> children = (ele || <span class="built_in">document</span>).getElementsByTagName(<span class="string">'*'</span>);</div><div class="line">		<span class="comment">//定义一个空数组，用于后续储存符合条件的元素</span></div><div class="line">		<span class="keyword">var</span> elements = [];</div><div class="line">		<span class="comment">//第一次通过byTagName循环遍历目标元素下的所有元素</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; children.length; i++) &#123;</div><div class="line">			<span class="keyword">var</span> child = children[i];</div><div class="line">			<span class="comment">//通过空格分隔元素的class名称</span></div><div class="line">			<span class="keyword">var</span> classNames = child.className.split(<span class="string">''</span>);</div><div class="line">			<span class="comment">//再次循环遍历元素的className</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; classNames.length; j++) &#123;</div><div class="line">				<span class="comment">//类名和传入的class相同时，通过push推到之前新建的空数组里</span></div><div class="line">				<span class="keyword">if</span>(classNames[j] === name) &#123;</div><div class="line">					elements.push(child);</div><div class="line">					<span class="comment">//找到后就跳出循环</span></div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">//最后返回数组</span></div><div class="line">		<span class="keyword">return</span> elements;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/08/js/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/08/js/" rel="next" title="让JavaScript的getElementsByClassName兼容iE8方法">
+                <i class="fa fa-chevron-left"></i> 让JavaScript的getElementsByClassName兼容iE8方法
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/28/cas/" itemprop="url">
-                  前端团队协同开发CSS规范制定
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-28T18:51:11+08:00" content="2016-08-28">
-              2016-08-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/28/cas/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/28/cas/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>自己来总结一下前端开发中关于CSS部分的团队开发规范。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/28/cas/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/26/js/" itemprop="url">
-                  用于li列表和表格排序的封装
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-26T23:59:05+08:00" content="2016-08-26">
-              2016-08-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/26/js/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/js/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <div class="post-spread">
       
         
-          <p>最近的学习排序所以学着封装了一个setSrot对象，分别对列表和表格进行排序。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/26/js/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/16/github-hexo/" itemprop="url">
-                  利用GitHub+Hexo搭建纯静态Blog网站（搭建篇）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-16T15:25:51+08:00" content="2016-08-16">
-              2016-08-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/16/github-hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/16/github-hexo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>自从接触前端以来，心中有一个想法要搭建一个自己的独立博客。之前尝试wordpress，自己试用一段时间，功能虽然很强大，插件也很丰富，但是感觉不是自己想要的。后来刷知乎的时候发现hexo，不需要数据库也不需要服务器，而且使用起来简单主题美，最主要是湾湾同胞开发。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/16/github-hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/14/Ajaxgitandpost/" itemprop="url">
-                  AJAX GET和POST请求方法封装
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-14T18:15:58+08:00" content="2016-08-14">
-              2016-08-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/14/Ajaxgitandpost/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/Ajaxgitandpost/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Ajax请求GET方法封装"><a href="#Ajax请求GET方法封装" class="headerlink" title="Ajax请求GET方法封装"></a>Ajax请求GET方法封装</h2><blockquote>
-<p>首先理一下思路</p>
-<ul>
-<li>方法要实现三个参数</li>
-</ul>
-</blockquote>
-<pre><code>- 请求资源 url
-- 请求的查询参数 optons
-- 请求的回调函数 callback 需要接收XHLHttpRequest对象的responseTex属性作为参数
-</code></pre>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/14/Ajaxgitandpost/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/14/SS-get/" itemprop="url">
-                  科学上网带你去看看外面的世界
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-14T10:46:53+08:00" content="2016-08-14">
-              2016-08-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/14/SS-get/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/SS-get/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>外面的世界是一个提供 免费 安全 稳定 不限速 VPN账号，让你简单快速实现科学上网。以下是如何注册使用的VPN账号的教程。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/14/SS-get/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/14/htmtlTag/" itemprop="url">
-                  常用HTML标签分类图+快速手册
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-14T00:35:42+08:00" content="2016-08-14">
-              2016-08-14
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随手分享/" itemprop="url" rel="index">
-                    <span itemprop="name">随手分享</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/14/htmtlTag/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/14/htmtlTag/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>从开始自学HTML开始遇到了很多坑，也刷了很多教程。在学习的过程中对于标签的分类和使用都很难理解清楚。后来发了一张图。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/14/htmtlTag/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -1333,6 +516,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/09/js/"
+           data-title="原生javascript实现鼠标拖拽移动元素" data-url="http://www.zyblog.info/2016/09/09/js/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -1352,8 +543,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/13148980143_Fotor.jpg"
@@ -1444,6 +644,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先HTML-CSS部分"><span class="nav-number">1.</span> <span class="nav-text">首先HTML+CSS部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">1.2.</span> <span class="nav-text">CSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS部分"><span class="nav-number">2.</span> <span class="nav-text">JS部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按下鼠标"><span class="nav-number">2.1.</span> <span class="nav-text">按下鼠标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标移动"><span class="nav-number">2.2.</span> <span class="nav-text">鼠标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标松开"><span class="nav-number">2.3.</span> <span class="nav-text">鼠标松开</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶"><span class="nav-number">3.</span> <span class="nav-text">进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#限制拖拽区域"><span class="nav-number">3.1.</span> <span class="nav-text">限制拖拽区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法封装"><span class="nav-number">3.2.</span> <span class="nav-text">方法封装</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1563,6 +774,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

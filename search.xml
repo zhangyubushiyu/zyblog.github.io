@@ -7,6 +7,7 @@
       <title><![CDATA[原生javascript实现鼠标拖拽移动元素]]></title>
       <url>http://www.zyblog.info/2016/09/09/js/</url>
       <content type="html"><![CDATA[<p>有很多网站经常可以发现弹出的窗口允许用户进行鼠标拖拽移动，一般像登录窗口、通知或提示窗口等等，下面来分享一下实现的原理。</p>
+<a id="more"></a>
 <h2 id="首先HTML-CSS部分"><a href="#首先HTML-CSS部分" class="headerlink" title="首先HTML+CSS部分"></a>首先HTML+CSS部分</h2><blockquote>
 <p>想要实现元素拖拽能移动，首先这个元素必须使用定位进行布局。</p>
 </blockquote>

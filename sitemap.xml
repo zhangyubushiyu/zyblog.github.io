@@ -4,7 +4,14 @@
   <url>
     <loc>http://www.zyblog.info/demo/index.html</loc>
     
-    <lastmod>2016-10-11T07:26:06.000Z</lastmod>
+    <lastmod>2016-10-11T13:18:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zyblog.info//404.html</loc>
+    
+    <lastmod>2016-10-11T13:17:24.000Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>http://www.zyblog.info/categories/index.html</loc>
     
     <lastmod>2016-09-07T08:10:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.zyblog.info//404.html</loc>
-    
-    <lastmod>2016-09-07T04:25:22.000Z</lastmod>
     
   </url>
   

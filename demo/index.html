@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://p1.bpimg.com/4851/5bcb2778ffe1ceab.jpg">
 <meta property="og:image" content="http://i1.piimg.com/4851/c0b4ed3025acc017.jpg">
 <meta property="og:image" content="http://p1.bpimg.com/4851/3befbf180785d19d.jpg">
-<meta property="og:updated_time" content="2016-10-11T14:07:05.000Z">
+<meta property="og:updated_time" content="2016-10-11T14:40:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="作品集合">
 <meta name="twitter:description" content=".demo-body {
@@ -353,14 +353,15 @@
 	}
 	
 	.demo-list .list-img a {
-		display: block !important;
+		overflow: hidden;
+		display: block ;
 		height: 115px;
 		border: none;
 	}
 	
 	.demo-list .list-img p {
 		position: relative;
-		bottom: 23px;
+		bottom: 0;
 		font-size: 12px;
 		font-weight: 300;
 		margin: 0;
@@ -368,6 +369,8 @@
 		text-align: center;
 		color: #fff;
 		width: 194px;
+		transition:All 0.4s ease-in-out;
+		
 	}
 	
 	.demo-list .img {
@@ -377,6 +380,16 @@
 		right: 0;
 		bottom: 0;
 		background: transparent;
+	}
+	.demo-list li a img{
+		transition:All 0.4s ease-in-out;
+	}
+	.demo-list .list-img li :hover img{
+		transform:scale(1.1);
+		
+	}
+	.demo-list .list-img li :hover p{
+		 transform:translate(0,-23px)
 	}
 </style>
 <div class="demo-body">
